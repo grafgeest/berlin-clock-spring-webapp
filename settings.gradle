@@ -1,0 +1,5 @@
+rootProject.name = 'berlin-clock-spring-webapp'
+
+include 'application'
+include 'berlin-clock'
+
