@@ -21,7 +21,7 @@ public class BerlinClockFixture {
     private String theTime;
 
     @Test
-    @Ignore
+//    @Ignore
     public void berlinClockAcceptanceTests() throws Exception {
         aBehaviouralTestRunner()
                 .usingStepsFrom(this)
