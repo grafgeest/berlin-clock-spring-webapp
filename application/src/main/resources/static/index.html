@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Berlin Clock</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        window.setInterval(function(){
+            var msg = $.ajax({type: "GET", url: "/get-berlin-clock-time", async: false}).responseText;
+            $("div").text(msg);
+        }, 1000);
+    </script>
+</head>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
