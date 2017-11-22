@@ -1,16 +1,18 @@
 $(document).ready(function(){
     var BerlinClock = function(){
-        var msg = $.ajax({type: "GET", url: "/get-berlin-clock-time", async: false}).responseText;
-        var time = new Date();
+        var now = getTime();
+
+        var msg = $.ajax({type: "GET", url: "/get-berlin-clock-time?time=" + now, async: false}).responseText;
+
         var array = msg.split("\n");
         var secLamp = array[0];
         var redRow1 = array[1].split("");
-        redRow1.splice(-1,1);
         var redRow2 = array[2].split("");
-        redRow2.splice(-1,1);
         var yellowRow1 = array[3].split("");
-        yellowRow1.splice(-1,1);
         var yellowRow2 = array[4].split("");
+        redRow1.splice(-1,1);
+        redRow2.splice(-1,1);
+        yellowRow1.splice(-1,1);
         yellowRow2.splice(-1,1);
 
         var berlinClock = [secLamp, redRow1, redRow2, yellowRow1, yellowRow2];
@@ -22,11 +24,16 @@ $(document).ready(function(){
                 else {$("#" + i + "_" + j).removeClass("red").removeClass("yellow")};
             }
         }
-        
-        var hours = time.getHours();
-        var minutes = time.getMinutes();
-        var seconds = time.getSeconds();
-        $('.time').text(hours + ":" + minutes + ":" + seconds);
+
+        $('.time').text(now);
+    };
+
+    var getTime = function() {
+        var now = new Date();
+        dateText = now.toTimeString();
+        dateText = dateText.split(' ')[0];
+
+        return dateText;
     };
 
     setInterval(function(){

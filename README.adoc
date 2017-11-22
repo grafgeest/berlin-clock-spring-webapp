@@ -1,15 +1,32 @@
 # berlin-clock-spring-webapp
 
+== What you'll build
+You'll build a simple web application with Spring Boot which represents Berlin Clock.
+
+== What you'll need
+
+:java_version: 1.8
+
 == Run the application
-To run the application, execute:
+To run the application in Windows, execute:
 
 [subs="attributes"]
 ----
+git clone https://github.com/grafgeest/berlin-clock-spring-webapp/
+cd berlin-clock-spring-webapp
 gradlew build && java -jar application/build/libs/berlinclock-0.0.1-SNAPSHOT.jar
 ----
 
-Check out the service.
 
+== Check out the service.
 ....
-$ curl localhost:8080
+$ curl localhost:9191
+You will find the Berlin clock
 ....
+
+== Application RESTful end points
+[subs="attributes"]
+----
+http://localhost:9191/get-server-berlin-clock-time
+http://localhost:9191/get-berlin-clock-time?time=00:00:00
+----
