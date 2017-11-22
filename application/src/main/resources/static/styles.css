@@ -1,0 +1,54 @@
+.row1{
+    margin: 0% 134px;
+    display: inline-block;
+}
+
+.row2, .row3, .row4, .row5{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+div div{
+    float: left;
+    border: 1px solid black;
+}
+
+.row1>div{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    text-align: center;
+}
+.row2>div{
+    width: 88px;
+    height: 88px;
+}
+.row3>div{
+    width: 88px;
+    height: 88px;
+}
+.row4>div{
+    width: 31px;
+    height: 88px;
+}
+.row5>div{
+    width: 88px;
+    height: 88px;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.time {
+    font-family: Arial, sans-serif;
+    color: #5C5B59;
+    text-shadow: 1px 1px 1px #fff;
+    font-size: 2em;
+    line-height: 1em;
+    margin: 0% 134px;
+}
