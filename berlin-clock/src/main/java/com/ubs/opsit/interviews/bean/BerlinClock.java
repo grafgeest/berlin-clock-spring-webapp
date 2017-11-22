@@ -4,14 +4,27 @@ import com.ubs.opsit.interviews.util.CharArrayUtils;
 
 import static com.ubs.opsit.interviews.util.Constants.*;
 
-public class Clock {
+
+/**
+ * Representation of a Berlin clock. The Berlin clock has 5 rows:
+ * </p>
+ *
+ * <li>First row means the top lamp is a pump which is blinking on/off every two
+ * seconds
+ * <li>Second row means 4 red lamps representing 5 hours each
+ * <li>Third row means 4 red lamps representing 1 hour each
+ * <li>Fourth row means 11 lamps each representing 5 minutes where every third
+ * is red and all other are yellow
+ * <li>Fifth row - 4 yellow lamps each representing 1 minute
+ */
+public class BerlinClock {
     private Character second;
     private Character[] firstHoursLine;
     private Character[] secondHoursLine;
     private Character[] firstMinutesLine;
     private Character[] secondMinutesLine;
 
-    public Clock(){
+    public BerlinClock(){
         this.second = YELLOW;
         this.firstHoursLine = new Character[]{RED, RED, RED, RED};
         this.secondHoursLine = new Character[]{RED, RED, RED, RED};

@@ -1,6 +1,7 @@
 package com.ubs.opsit.interviews.util.parser;
 
 import com.ubs.opsit.interviews.bean.Time;
+import com.ubs.opsit.interviews.util.parser.impl.TimeParser;
 import com.ubs.opsit.interviews.util.validator.AbstractPatternValidator;
 import com.ubs.opsit.interviews.util.validator.TimeValidator;
 import org.junit.Before;

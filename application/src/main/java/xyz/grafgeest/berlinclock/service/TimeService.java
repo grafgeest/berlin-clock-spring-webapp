@@ -9,6 +9,6 @@ import java.time.format.DateTimeFormatter;
 public class TimeService {
 
     public String getCurrentTime(){
-        return LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss"));
+        return LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
     }
 }

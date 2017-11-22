@@ -1,9 +1,8 @@
 package com.ubs.opsit.interviews;
 
-import com.ubs.opsit.interviews.converter.BerlinClockTimeConverter;
+import com.ubs.opsit.interviews.factory.TimeConverterFactory;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static com.ubs.opsit.interviews.support.BehaviouralTestEmbedder.aBehaviouralTestRunner;
@@ -17,11 +16,10 @@ import static org.junit.Assert.assertThat;
  */
 public class BerlinClockFixture {
 
-    private TimeConverter berlinClock = new BerlinClockTimeConverter();
+    private TimeConverter berlinClock = TimeConverterFactory.newInstance();
     private String theTime;
 
     @Test
-//    @Ignore
     public void berlinClockAcceptanceTests() throws Exception {
         aBehaviouralTestRunner()
                 .usingStepsFrom(this)

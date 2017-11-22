@@ -1,5 +1,8 @@
 package com.ubs.opsit.interviews.bean;
 
+/**
+ * Class represents the time as HOUR, MINUTES, SECONDS.
+ */
 public class Time {
 
     private int hour;

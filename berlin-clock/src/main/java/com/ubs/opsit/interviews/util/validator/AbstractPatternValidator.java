@@ -1,5 +1,7 @@
 package com.ubs.opsit.interviews.util.validator;
 
+import com.ubs.opsit.interviews.exception.IllegalTimeFormatException;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,5 +24,5 @@ public abstract class AbstractPatternValidator {
         return matcher.matches();
     }
 
-    public abstract boolean validate(final String arg) throws IllegalArgumentException;
+    public abstract boolean validate(final String arg) throws IllegalTimeFormatException;
 }
