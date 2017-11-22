@@ -4,13 +4,12 @@
 You'll build a simple web application with Spring Boot which represents Berlin Clock.
 
 == What you'll need
-
-:java_version: 1.8
+java_version: 1.8
 
 == Run the application
 To run the application in Windows, execute:
 
-[subs="attributes"]
+
 ----
 git clone https://github.com/grafgeest/berlin-clock-spring-webapp/
 cd berlin-clock-spring-webapp
